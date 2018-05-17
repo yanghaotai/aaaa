@@ -44,6 +44,7 @@ def send_email(smtpHost, sendAddr, password, recipientAddrs, subject='', content
     smtp.login(sendAddr, password)
     smtp.sendmail(sendAddr, recipientAddrs, str(msg))
     print("发送成功！")
+    print('-----------')
     smtp.quit()
 
 
