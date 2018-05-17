@@ -10,6 +10,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 
+
 def all_case():
     # 待执行用例的目录
     case_dir = "D:\\aaaa\\bbbb\\case"
@@ -23,7 +24,7 @@ def all_case():
     print(testcase)
     return(testcase)
 
-
+#发送邮件
 def send_email(smtpHost, sendAddr, password, recipientAddrs, subject='', content=''):
     msg = email.mime.multipart.MIMEMultipart()
     msg['from'] = sendAddr
@@ -61,3 +62,4 @@ if __name__ == "__main__":
         send_email('smtp.163.com', 'yanghaotai@163.com', '15811307862yht', '596532245@qq.com', subject, content)
     except Exception as err:
         print(err)
+
